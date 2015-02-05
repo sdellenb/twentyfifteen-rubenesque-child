@@ -11,3 +11,28 @@ Version:     0.1
 @import url('../twentyfifteen/style.css');
 
 /* Theme customization starts below this line -------- */
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 1.5rem;
+}
+
+.widget {
+  font-size: 1.4rem;
+}
+
+.widget select {
+  font-size: 1.3rem;
+}
+
+.entry-title {
+  font-size: 3.0rem;
+}
+
+.entry-content {
+  font-size: 1.5rem;
+}
