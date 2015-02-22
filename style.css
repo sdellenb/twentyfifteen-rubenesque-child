@@ -91,6 +91,10 @@ textarea {
   content: "\f410";
 }
 
+.social-navigation a[href*="www.rubenesque.ch/feed/"]:before {
+  content: "\f413";
+}
+
 .social-navigation a[href*="www.rubenesque.ch/addtofeedly"]:before {
   background-image: url('images/feedly-follow-logo-black_2x.png');
   background-position: top left;
