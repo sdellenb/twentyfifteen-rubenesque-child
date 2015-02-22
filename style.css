@@ -72,3 +72,30 @@ textarea {
 .site-main {
   padding-top: 2em;
 }
+
+/**
+ * Social Navigation Menu customization.
+ * Changes:
+ * - Reduced width brings icons closer together, as there are quite many.
+ * - Contact page link shows email symbol instead of generic one.
+ * - Feedly link shows Feedly image.
+ */
+
+.social-navigation li {
+  /* 1/6 of the width, so the 6 buttons are equally spaced. */
+  width: 16.67%;
+}
+
+.social-navigation a[href*="www.rubenesque.ch/contact"]:before {
+  content: "\f410";
+}
+
+.social-navigation a[href*="www.rubenesque.ch/addtofeedly"]:before {
+  background-image: url('images/feedly-follow-logo-black_2x.png');
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 28px;
+  width: 28px;
+  content: "";
+}
