@@ -87,7 +87,7 @@ textarea {
   width: 16.67%;
 }
 
-.social-navigation a[href*="www.rubenesque.ch/contact"]:before {
+.social-navigation a[href*="www.rubenesque.ch/contact/"]:before {
   content: "\f410";
 }
 
