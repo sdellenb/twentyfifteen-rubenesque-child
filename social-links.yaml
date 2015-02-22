@@ -1,14 +1,26 @@
 # Links for the Social Menu in the Twenty Fifteen Wordpress Theme.
 # Note: This is only a settings backup file, as the Wordpress
 #       export/import is quite cumbersome.
+#       Enable "Link Target" and "Description" fields in the options.
+# Name:
+#     - URL
+#     - Title (tooltip)
+#     - Link target (for new window / tab)
+
 Facebook:
 	- https://facebook.com/profile.php?id=143246569033926
+	- [:de]Folge mir auf Facebook[:en]Follow me on Facebook
+	- target=_blank
 
 Instagram:
 	- https://instagram.com/melanierubenesque
+	- [:de]Folge mir auf Instagram[:en]Follow me on instagram
+	- target=_blank
 
 Pinterest:
 	- https://www.pinterest.com/source/rubenesque.ch
+	- [:de]Meine Pinterest-Boards[:en]My Pinterest boards
+	- target=_blank
 
 Kontakt:
 	- http://www.rubenesque.ch/contact/
@@ -18,3 +30,5 @@ RSS Feed:
 
 Add to Feedly:
 	- http://www.rubenesque.ch/addtofeedly
+	- [:de]Mit Feedly abonnieren[:en]Subscribe with Feedly
+	- target=_blank
