@@ -36,3 +36,39 @@ textarea {
 .entry-content {
   font-size: 1.5rem;
 }
+
+/**
+ * Side Bar stuff.
+ */
+.main-navigation {
+  /* Since the header is now missing from the side bar, we need some extra space. */
+  padding-top: 2em;
+}
+
+/**
+ * Site Header stuff.
+ * The site header was moved from the side bar to the main content area.
+ */
+
+.site-header {
+  margin: 0;
+  padding: 2em 0 0 2em;
+}
+
+.site-branding {
+  float: left;
+  width: 25%;
+}
+
+.header-image {
+  background-image: url('images/banner_rechts_resized.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 520px;
+  width: 75%;
+  float: left;
+}
+
+.site-main {
+  padding-top: 2em;
+}
