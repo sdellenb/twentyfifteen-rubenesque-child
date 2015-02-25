@@ -37,27 +37,26 @@ textarea {
     font-size: 1.5rem;
 }
 
-.site-header {
+/* Disabled, because it adds unnecessary white space around the collapsed sidebar on small screens. */
+/*.site-header {
     margin-top: 2em;
     margin-bottom: 2em;
+}*/
+
+div.header-image {
+    margin: 1rem;
 }
 
-.header-image {
-    background-image: url('images/banner_resized.jpg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 450px;
-    width: 900px;
-    margin-bottom: 2em;
-    /* Horizontally centered */
-    position: relative;
-    margin-left: -450px;
-    left: 50%;
+img.header-image {
+    /* TODO: Prevent image upscaling. */
+    height: 100%;
+    width: 100%;
 }
 
-.site-main {
-    padding-top: 2em;
-}
+/* Disabled because it also adds unnecessary white space between the banner and the collapsed sidebar. */
+/*.site-main {
+     padding-top: 2em;
+}*/
 
 /**
  * Social Navigation Menu customization.

@@ -11,7 +11,9 @@
 ?>
 
 <!--  Base header image with 3 pictures. -->
-<div id="header-image" class="header-image"></div>
+<div id="header-image-div" class="header-image">
+    <img id="header-image" class="header-image" src="<?php echo get_stylesheet_directory_uri(); ?>/images/banner_resized.jpg" " alt="Blog Header Image">
+</div>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php
