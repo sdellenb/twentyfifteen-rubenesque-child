@@ -7,7 +7,6 @@ Author URI:  sdellenb@gmail.com
 Template:    twentyfifteen
 Version:     0.2
 */
-
 @import url('../twentyfifteen/style.css');
 
 /* Theme customization starts below this line -------- */
@@ -17,61 +16,47 @@ button,
 input,
 select,
 textarea {
-  /* Font selection is now controlled by the Typecase plugin instead. */
-  /* font-family: "Open Sans", Helvetica, Arial, sans-serif; */
-  font-size: 1.5rem;
+    /* Font selection is now controlled by the Typecase plugin instead. */
+    /* font-family: "Open Sans", Helvetica, Arial, sans-serif; */
+    font-size: 1.5rem;
 }
 
 .widget {
-  font-size: 1.4rem;
+    font-size: 1.4rem;
 }
 
 .widget select {
-  font-size: 1.3rem;
+    font-size: 1.3rem;
 }
 
 .entry-title {
-  font-size: 3.0rem;
+    font-size: 3.0rem;
 }
 
 .entry-content {
-  font-size: 1.5rem;
+    font-size: 1.5rem;
 }
-
-/**
- * Side Bar stuff.
- */
-.main-navigation {
-  /* Since the header is now missing from the side bar, we need some extra space. */
-  padding-top: 2em;
-}
-
-/**
- * Site Header stuff.
- * The site header was moved from the side bar to the main content area.
- */
 
 .site-header {
-  margin: 0;
-  padding: 2em 0 0 2em;
-}
-
-.site-branding {
-  float: left;
-  width: 25%;
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 
 .header-image {
-  background-image: url('images/banner_rechts_resized.jpg');
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 520px;
-  width: 75%;
-  float: left;
+    background-image: url('images/banner_resized.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 450px;
+    width: 900px;
+    margin-bottom: 2em;
+    /* Horizontally centered */
+    position: relative;
+    margin-left: -450px;
+    left: 50%;
 }
 
 .site-main {
-  padding-top: 2em;
+    padding-top: 2em;
 }
 
 /**
@@ -83,24 +68,24 @@ textarea {
  */
 
 .social-navigation li {
-  /* 1/6 of the width, so the 6 buttons are equally spaced. */
-  width: 16.67%;
+    /* 1/6 of the width, so the 6 buttons are equally spaced. */
+    width: 16.67%;
 }
 
 .social-navigation a[href*="www.rubenesque.ch/contact/"]:before {
-  content: "\f410";
+    content: "\f410";
 }
 
 .social-navigation a[href*="www.rubenesque.ch/feed/"]:before {
-  content: "\f413";
+    content: "\f413";
 }
 
 .social-navigation a[href*="www.rubenesque.ch/addtofeedly"]:before {
-  background-image: url('images/feedly-follow-logo-black_2x.png');
-  background-position: top left;
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 28px;
-  width: 28px;
-  content: "";
+    background-image: url('images/feedly-follow-logo-black_2x.png');
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 28px;
+    width: 28px;
+    content: "";
 }
