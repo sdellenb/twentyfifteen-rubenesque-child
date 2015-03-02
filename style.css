@@ -29,22 +29,16 @@ textarea {
     font-size: 1.3rem;
 }
 
-.entry-title {
-    font-size: 3.0rem;
+@media screen and (max-device-width : 600px) {
+    div.header-image {
+        margin: 1rem;
+    }
 }
 
-.entry-content {
-    font-size: 1.5rem;
-}
-
-/* Disabled, because it adds unnecessary white space around the collapsed sidebar on small screens. */
-/*.site-header {
-    margin-top: 2em;
-    margin-bottom: 2em;
-}*/
-
-div.header-image {
-    margin: 1rem;
+@media screen and (min-device-width : 600px) {
+    div.header-image {
+        margin: 2rem;
+    }
 }
 
 img.header-image {
