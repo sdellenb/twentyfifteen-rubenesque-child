@@ -59,8 +59,19 @@ h2,
  */
 
 .social-navigation li {
-    /* 1/6 of the width, so the 6 buttons are equally spaced. */
-    width: 16.67%;
+    /* 1/6 of the width (rounded down), so the 6 buttons are equally spaced and fit on one line.*/
+    width: 16.666%;
+}
+
+/* Use alternative icons for Facebook and Pinterest. */
+.social-navigation a[href*="facebook.com"]:before {
+    /*content: "\f203";*/
+    content: "\f204";
+}
+
+.social-navigation a[href*="pinterest.com"]:before {
+    /*content: "\f210";*/
+    content: "\f209";
 }
 
 .social-navigation a[href*="www.rubenesque.ch/contact/"]:before {
