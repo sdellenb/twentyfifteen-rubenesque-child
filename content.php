@@ -28,11 +28,23 @@
 
 	<div class="entry-content">
 		<?php
+		$oldage = 10 * 24 * 60 * 60; // Ten day in seconds.
+		$limit = date_i18n('U') - $oldage; // Difference to today's date as a unix timestamp (unit: seconds).
+		$articledate = get_the_time('U');
+
+		if ( $articledate >= $limit || is_sticky() ) {
+			// This post is newer than the limit, or a sticky post, force to show the whole contents.
+			global $more;
+			$more = 1;
+			the_content();
+		} else {
+			// This post is older than the limit, so we allow the 'Read more...' link to appear (if there is one).
 			/* translators: %s: Name of current post */
 			the_content( sprintf(
 				__( 'Continue reading %s', 'twentyfifteen' ),
 				the_title( '<span class="screen-reader-text">', '</span>', false )
 			) );
+		}
 
 			wp_link_pages( array(
 				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentyfifteen' ) . '</span>',
