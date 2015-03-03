@@ -53,6 +53,7 @@
         <!--  Base header image with 3 pictures. -->
         <div id="header-image-div" class="header-image">
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                <img id="header-image" class="header-image" src="<?php echo get_stylesheet_directory_uri(); ?>/images/banner_resized.jpg" " alt="Blog Header Image">
+                <img id="header-image" class="header-image" alt="Rubenesque Blog Header Image"
+                     src="<?php echo get_stylesheet_directory_uri(); ?>/images/rubenesque_2015_banner_950x475.jpg">
             </a>
         </div>

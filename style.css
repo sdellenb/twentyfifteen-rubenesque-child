@@ -29,28 +29,17 @@ textarea {
     font-size: 1.3rem;
 }
 
-@media screen and (max-device-width : 600px) {
+@media screen and (max-device-width : 640px) {
     div.header-image {
         margin: 1rem;
     }
 }
 
-@media screen and (min-device-width : 600px) {
+@media screen and (min-device-width : 640px) {
     div.header-image {
         margin: 2rem;
     }
 }
-
-img.header-image {
-    /* TODO: Prevent image upscaling. */
-    height: 100%;
-    width: 100%;
-}
-
-/* Disabled because it also adds unnecessary white space between the banner and the collapsed sidebar. */
-/*.site-main {
-     padding-top: 2em;
-}*/
 
 /**
  * Social Navigation Menu customization.
