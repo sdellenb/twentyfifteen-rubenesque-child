@@ -32,5 +32,3 @@ function antispam_bee_add_custom_patterns($patterns) {
 
 	return $patterns;
 }
-
-?>
