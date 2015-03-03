@@ -16,9 +16,18 @@ button,
 input,
 select,
 textarea {
-    /* Font selection is now controlled by the Typecase plugin instead. */
-    /* font-family: "Open Sans", Helvetica, Arial, sans-serif; */
+    font-family: "Noto Sans", sans-serif;
     font-size: 1.5rem;
+}
+
+h1,
+h2,
+.site-title {
+    font-family: "Noto Serif", serif;
+}
+
+.site-title {
+    font-size: 3.5rem;
 }
 
 .widget {
