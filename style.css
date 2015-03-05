@@ -56,6 +56,12 @@ h2,
     }
 }
 
+/* Lists within the post content area only. The site menus are also lists.. */
+.entry-content ul, .entry-content ol {
+    /* The default padding is zero. */
+    padding-left: 3rem;
+}
+
 /**
  * Social Navigation Menu customization.
  * Changes:
