@@ -63,6 +63,11 @@ h2,
     padding-left: 3rem;
 }
 
+/* Entry footer */
+.entry-footer {
+    font-size: 1.4rem;
+}
+
 /**
  * Social Navigation Menu customization.
  * Changes:
