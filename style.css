@@ -5,7 +5,7 @@ Description: Twenty Fifteen Child Theme for rubenesque.ch
 Author:      Simon Dellenbach
 Author URI:  sdellenb@gmail.com
 Template:    twentyfifteen
-Version:     0.3
+Version:     1.0
 License:     GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: twentyfifteen
@@ -66,6 +66,27 @@ h2,
 /* Entry footer */
 .entry-footer {
     font-size: 1.4rem;
+}
+
+/* Site info in footer settings */
+.site-info {
+    font-size: 1.3rem;
+}
+
+.site-info ul
+{
+    margin: 0;
+    padding: 0;
+}
+
+.site-info ul li
+{
+    list-style-type: none;
+    display: inline;
+}
+
+.site-info li:not(:first-child):before {
+    content: " | ";
 }
 
 /**
