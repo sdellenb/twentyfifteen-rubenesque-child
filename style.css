@@ -14,8 +14,9 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 
-/* Theme customization starts below this line -------- */
+/* Twenty Fifteen Child Theme customization */
 
+/* Overall font settings */
 body,
 button,
 input,
@@ -43,6 +44,7 @@ h2,
     font-size: 1.3rem;
 }
 
+/* Header Image margins */
 @media screen and (max-device-width: 640px) {
     div.header-image {
         margin: 1rem;
@@ -65,8 +67,9 @@ h2,
  * Social Navigation Menu customization.
  * Changes:
  * - Reduced width brings icons closer together, as there are quite many.
+ * - Use alternative Facebook and Pinterest icons.
  * - Contact page link shows email symbol instead of generic one.
- * - Feedly link shows Feedly image.
+ * - Feedly link shows Feedly image (no genericon).
  */
 
 .social-navigation li {
@@ -76,12 +79,10 @@ h2,
 
 /* Use alternative icons for Facebook and Pinterest. */
 .social-navigation a[href*="facebook.com"]:before {
-    /*content: "\f203";*/
     content: "\f204";
 }
 
 .social-navigation a[href*="pinterest.com"]:before {
-    /*content: "\f210";*/
     content: "\f209";
 }
 
@@ -94,9 +95,7 @@ h2,
 }
 
 .social-navigation a[href*="www.rubenesque.ch/addtofeedly"]:before {
-    background-image: url('images/feedly-follow-logo-black_2x.png');
-    background-position: top left;
-    background-repeat: no-repeat;
+    background: url('images/feedly-follow-logo-black_2x.png') no-repeat top left;
     background-size: contain;
     height: 28px;
     width: 28px;
