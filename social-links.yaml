@@ -8,17 +8,17 @@
 #     - Link target (for new window / tab)
 
 Facebook:
-	- https://facebook.com/profile.php?id=143246569033926
+	- http://www.rubenesque.ch/follow/rubenesque-facebook
 	- [:de]Folge mir auf Facebook[:en]Follow me on Facebook
 	- target=_blank
 
 Instagram:
-	- https://instagram.com/melanierubenesque
+	- http://www.rubenesque.ch/follow/rubenesque-instagram
 	- [:de]Folge mir auf Instagram[:en]Follow me on instagram
 	- target=_blank
 
 Pinterest:
-	- https://www.pinterest.com/source/rubenesque.ch
+	- http://www.rubenesque.ch/follow/rubenesque-pinterest
 	- [:de]Meine Pinterest-Boards[:en]My Pinterest boards
 	- target=_blank
 

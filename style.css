@@ -5,7 +5,7 @@ Description: Twenty Fifteen Child Theme for rubenesque.ch
 Author:      Simon Dellenbach
 Author URI:  sdellenb@gmail.com
 Template:    twentyfifteen
-Version:     1.0
+Version:     1.0.1
 License:     GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: twentyfifteen
@@ -103,12 +103,16 @@ h2,
     width: 16.666%;
 }
 
-/* Use alternative icons for Facebook and Pinterest. */
-.social-navigation a[href*="facebook.com"]:before {
+/* Use pretty links and alternative icons for Facebook and Pinterest. */
+.social-navigation a[href*="www.rubenesque.ch/follow/rubenesque-facebook"]:before {
     content: "\f204";
 }
 
-.social-navigation a[href*="pinterest.com"]:before {
+.social-navigation a[href*="www.rubenesque.ch/follow/rubenesque-instagram"]:before {
+    content: "\f215";
+}
+
+ .social-navigation a[href*="www.rubenesque.ch/follow/rubenesque-pinterest"]:before {
     content: "\f209";
 }
 
