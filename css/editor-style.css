@@ -1,0 +1,46 @@
+/*
+Theme Name: Twenty Fifteen
+Description: Used to style the TinyMCE editor.
+*/
+
+/* Overall font settings */
+body,
+button,
+input,
+select,
+textarea {
+    font-family: "Noto Sans", sans-serif;
+}
+
+h1,
+h2 {
+    font-family: "Noto Serif", serif;
+}
+
+blockquote {
+    font-size: 1.5rem;
+}
+
+mce-content-body {
+    font-size: 0.9rem;
+}
+
+/**
+ * Special formatting for the Project 333 Review overview thumbnails.
+ */
+table.imagetable {
+  border-collapse: collapse;
+  border: none;
+}
+
+td.imagetable {
+  border: none;
+  padding: 4px;
+}
+
+img.specialthumbnail {
+   float: left;
+   height: 192px;
+   max-height: 192px;
+   max-width: 150px;
+}
