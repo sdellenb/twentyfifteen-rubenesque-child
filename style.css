@@ -135,3 +135,24 @@ blockquote {
     width: 28px;
     content: "";
 }
+
+/**
+ * Special formatting for the Project 333 Review overview thumbnails.
+ */
+table.imagetable {
+    border-collapse: collapse;
+    border: none;
+}
+
+td.imagetable {
+    border: none;
+    padding: 4px;
+}
+
+img.specialthumbnail {
+   float: left;
+   height: 192px;
+   max-height: 192px;
+   max-width: 150px;
+}
+
