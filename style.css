@@ -44,6 +44,10 @@ h2,
     font-size: 1.3rem;
 }
 
+blockquote {
+    font-size: 1.5rem;
+}
+
 /* Header Image margins */
 @media screen and (max-device-width: 640px) {
     div.header-image {
