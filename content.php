@@ -20,6 +20,9 @@
 		<?php
 		if ( is_single() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
+			if ( in_category( 'mehrsprachig' )) :
+				echo qtrans_generateLanguageSelectCode('both'); // Show the qTranslate language switcher for the specified category only.
+			endif;
 		else :
 			the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
 		endif;
