@@ -93,6 +93,12 @@ blockquote {
     content: " | ";
 }
 
+/* Make reply button a bit smaller. */
+.comment-list .reply {
+    font-size: 11px;
+    font-size: 1.1rem;
+}
+
 /**
  * Social Navigation Menu customization.
  * Changes:
