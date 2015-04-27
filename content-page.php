@@ -18,7 +18,7 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		<?php
 			// Show the qTranslate language switcher.
-			echo qtrans_generateLanguageSelectCode('both');
+			echo qtranxf_generateLanguageSelectCode('both');
 		?>
 	</header><!-- .entry-header -->
 

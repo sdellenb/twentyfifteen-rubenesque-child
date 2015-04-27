@@ -160,16 +160,16 @@ img.specialthumbnail {
  * Modified QTranslate style to show both flags in one row. 
  * See http://www.michael-helmer.de/internet/wordpress/wordpress-plugin-zweisprachig-englisch-deutsch
  */
-.qtrans_language_chooser {
+.qtranxs_language_chooser {
     list-style-type: none;
     margin-left: 5px;
     font-size: smaller;
     display: inline-block;
 }
-.qtrans_language_chooser li {
+.qtranxs_language_chooser li {
     float: left;
     margin-right: 10px;
 }
-.qtrans_flag {
-    border: 1px solid #b6b6b6;
+.qtranxs_flag_and_text > span {
+    margin-left: 20px;
 }
