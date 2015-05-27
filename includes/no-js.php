@@ -1,4 +1,8 @@
 <?php
+/* Use WordPress functions within this file. Without it, it will crash on line 31. */
+define('WP_USE_THEMES', false);
+require_once('/srv/www/sites/rubenesque.ch/wp-blog-header.php');
+
 	function gaParseCookie() {
 		if (isset($_COOKIE['_ga'])) {
 			list($version,$domainDepth, $cid1, $cid2) = explode('.', $_COOKIE["_ga"], 4);
