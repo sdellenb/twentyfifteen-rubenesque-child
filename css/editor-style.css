@@ -28,19 +28,17 @@ blockquote {
 /**
  * Special formatting for the Project 333 Review overview thumbnails.
  */
-table.imagetable {
-  border-collapse: collapse;
-  border: none;
+ul.imagelist {
+    padding: 1rem;
 }
 
-td.imagetable {
-  border: none;
-  padding: 4px;
+li.imagelist {
+    list-style-type: none;
+    margin: 4px;
+    float: left;
 }
 
-img.specialthumbnail {
-   float: left;
-   height: 192px;
-   max-height: 192px;
-   max-width: 150px;
+img.imagelist {
+    max-height: 192px;
+    max-width: 150px;
 }

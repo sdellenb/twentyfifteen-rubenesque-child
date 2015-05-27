@@ -146,7 +146,6 @@ blockquote {
  * Special formatting for the Project 333 Review overview thumbnails.
  * Use a floating unordered list for responsive UI.
  */
-
 ul.imagelist {
     padding: 1rem;
 }
@@ -158,24 +157,6 @@ li.imagelist {
 }
 
 img.imagelist {
-    max-height: 192px;
-    max-width: 150px;
-}
-
-/* Previous styles. Remove them when all articles have been switched to the unordered list */
-table.imagetable {
-    border-collapse: collapse;
-    border: none;
-}
-
-td.imagetable {
-    border: none;
-    padding: 4px;
-}
-
-img.specialthumbnail {
-    float: left;
-    height: 192px;
     max-height: 192px;
     max-width: 150px;
 }
