@@ -3,58 +3,81 @@
 define('WP_USE_THEMES', false);
 require_once('/srv/www/sites/rubenesque.ch/wp-blog-header.php');
 
+// Based on code from https://gist.github.com/chrisblakley/e1f3d79b6cecb463dd8a.
+
+// Google Analytics Tracking ID.
+$ga_tracking_id = 'UA-63124546-1';
+
+//Parse the GA Cookie
 function gaParseCookie() {
-    if (isset($_COOKIE['_ga'])) {
-        list($version,$domainDepth, $cid1, $cid2) = explode('.', $_COOKIE["_ga"], 4);
-        $contents = array('version' => $version, 'domainDepth' => $domainDepth, 'cid' => $cid1 . '.' . $cid2);
-        $cid = $contents['cid'];
-    } else {
-        $cid = gaGenerateUUID();
-    }
-    return $cid;
+	if (isset($_COOKIE['_ga'])) {
+		list($version, $domainDepth, $cid1, $cid2) = explode('.', $_COOKIE["_ga"], 4);
+		$contents = array('version' => $version, 'domainDepth' => $domainDepth, 'cid' => $cid1 . '.' . $cid2);
+		$cid = $contents['cid'];
+	} else {
+		$cid = gaGenerateUUID();
+	}
+	return $cid;
 }
 
+//Generate UUID
+//Special thanks to stumiller.me for this formula.
 function gaGenerateUUID() {
-    return sprintf( '%04x%04x-%04x-%04x-%04x-%04x%04x%04x',
-        mt_rand(0, 0xffff), mt_rand(0, 0xffff), //32 bits for "time_low"
-        mt_rand(0, 0xffff), //16 bits for "time_mid"
-        mt_rand(0, 0x0fff) | 0x4000, //16 bits for "time_hi_and_version", Four most significant bits holds version number 4
-        mt_rand(0, 0x3fff) | 0x8000, //16 bits, 8 bits for "clk_seq_hi_res", 8 bits for "clk_seq_low", Two most significant bits holds zero and one for variant DCE1.1
-        mt_rand(0, 0xffff), mt_rand(0, 0xffff), mt_rand(0, 0xffff) //48 bits for "node"
-    );
+	return sprintf('%04x%04x-%04x-%04x-%04x-%04x%04x%04x',
+		mt_rand(0, 0xffff), mt_rand(0, 0xffff),
+		mt_rand(0, 0xffff),
+		mt_rand(0, 0x0fff) | 0x4000,
+		mt_rand(0, 0x3fff) | 0x8000,
+		mt_rand(0, 0xffff), mt_rand(0, 0xffff), mt_rand(0, 0xffff)
+	);
 }
 
+//Send Data to Google Analytics
+//For parameters, see https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters
 function gaSendData($data) {
-    $getString = 'https://ssl.google-analytics.com/collect';
-    $getString .= '?payload_data&';
-    $getString .= http_build_query($data);
-    $result = wp_remote_get($getString);
-    return $result;
+	$getString = 'https://ssl.google-analytics.com/collect';
+	$getString .= '?payload_data&';
+	$getString .= http_build_query($data);
+	$result = wp_remote_get($getString);
+	return $result;
 }
 
-//First, log the pageview
-$data = array(
-    'v' => 1,
-    'tid' => 'UA-63124546-1', //Add your own Google Analytics account number here!
-    'cid' => gaParseCookie(),
-    't' => 'pageview',
-    'dh' => $_GET['h'], //Document Hostname
-    'dp' => $_GET['p'], //Page
-    'dt' => $_GET['t'] //Title
-);
-gaSendData($data);
+//Send Pageview Function for Server-Side Google Analytics
+//https://developers.google.com/analytics/devguides/collection/protocol/v1/devguide#page
+function ga_send_pageview($hostname=null, $page=null, $title=null) {
+	$data = array(
+		'v' => 1,
+		'tid' => $ga_tracking_id,
+		'cid' => gaParseCookie(),
+		't' => 'pageview',
+		'dh' => $hostname, //Document Hostname "gearside.com"
+		'dp' => $page, //Page "/something"
+		'dt' => $title //Title
+	);
+	gaSendData($data);
+}
 
-//Send the "JavaScript Disabled" event
-$data = array(
-    'v' => 1,
-    'tid' => 'UA-63124546-1', //Add your own Google Analytics account number here!
-    'cid' => gaParseCookie(),
-    't' => 'event',
-    'ec' => 'JavaScript Disabled', //Category
-    'ea' => $_GET['t'], //Action
-    //'el' => 'label' //Label
-);
-gaSendData($data);
+//Send Event Function for Server-Side Google Analytics
+//https://developers.google.com/analytics/devguides/collection/protocol/v1/devguide#event
+function ga_send_event($category=null, $action=null, $label=null) {
+	$data = array(
+		'v' => 1,
+		'tid' => $ga_tracking_id,
+		'cid' => gaParseCookie(),
+		't' => 'event',
+		'ec' => $category, //Category (Required)
+		'ea' => $action, //Action (Required)
+		'el' => $label //Label
+	);
+	gaSendData($data);
+}
 
-// Prevent a 404, set the appropriate content header for: 'nothing to see here'.
-header("HTTP/1.0 204 No Content");
+if (isset($_GET['h']) && isset($_GET['p']) && isset($_GET['t'])) {
+	ga_send_pageview($_GET['h'], $_GET['p'], $_GET['t']);
+	ga_send_event('JavaScript Disabled', $_GET['t'], $_GET['t']);
+	// Prevent a 404, set the appropriate content header for: 'nothing to see here'.
+	header("HTTP/1.0 204 No Content");
+} else {
+	// Missing parameter, bad request.
+	header("HTTP/1.0 400 Bad Request");
+}
