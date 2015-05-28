@@ -73,10 +73,20 @@ function ga_send_event($category=null, $action=null, $label=null) {
 }
 
 if (isset($_GET['h']) && isset($_GET['p']) && isset($_GET['t'])) {
-	ga_send_pageview($_GET['h'], $_GET['p'], $_GET['t']);
-	ga_send_event('JavaScript Disabled', $_GET['t'], $_GET['t']);
-	// Prevent a 404, set the appropriate content header for: 'nothing to see here'.
-	header("HTTP/1.0 204 No Content");
+	if ($_GET['h'] == 'www.rubenesque.ch' {
+		ga_send_pageview($_GET['h'], $_GET['p'], $_GET['t']);
+		ga_send_event('JavaScript Disabled', $_GET['t'], $_GET['t']);
+		// Prevent a 404, set the appropriate content header for: 'nothing to see here'.
+		header("HTTP/1.0 204 No Content");
+	} else {
+		// Block all analytics spam trying to set a different host.
+		// as seen with "to use this feature visit: EVENT-TRACKING.COM"
+		// For more information, see
+		// https://www.topdraw.com/blog/spammers-now-targeting-google-analytics-events/
+		// and http://www.g1440.com/2015/05/google-analytics-event-tracking-spam/
+		// Note: Still won't help if they guessed the tracking ID and are spamming from somewhere else..
+		header("HTTP/1.0 403 Forbidden");
+	}
 } else {
 	// Missing parameter, bad request.
 	header("HTTP/1.0 400 Bad Request");
