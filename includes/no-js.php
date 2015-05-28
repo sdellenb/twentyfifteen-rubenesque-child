@@ -56,4 +56,5 @@ $data = array(
 );
 gaSendData($data);
 
-?>
+// Prevent a 404, set the appropriate content header for: 'nothing to see here'.
+header("HTTP/1.0 204 No Content");
