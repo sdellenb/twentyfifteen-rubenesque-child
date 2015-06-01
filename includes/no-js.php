@@ -73,7 +73,7 @@ function ga_send_event($category=null, $action=null, $label=null) {
 }
 
 if (isset($_GET['h']) && isset($_GET['p']) && isset($_GET['t'])) {
-	if ($_GET['h'] == 'www.rubenesque.ch' {
+	if ($_GET['h'] == 'www.rubenesque.ch') {
 		ga_send_pageview($_GET['h'], $_GET['p'], $_GET['t']);
 		ga_send_event('JavaScript Disabled', $_GET['t'], $_GET['t']);
 		// Prevent a 404, set the appropriate content header for: 'nothing to see here'.
