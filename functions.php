@@ -28,7 +28,7 @@ function antispam_bee_add_custom_patterns($patterns) {
 	// Pattern for phony author names.
 	// Fun Fact: The last one is 'Prada' in Japanese.
 	$patterns[] = array(
-		'author' => 'moncler|north face|vuitton|handbag|burberry|outlet|dress|maillot|oakley|ralph lauren|ray ban|iphone|???'
+		'author' => 'moncler|north face|vuitton|handbag|burberry|outlet|dress|maillot|oakley|ralph lauren|ray ban|iphone|プラダ'
 	);
 
 	// Pattern for phony web pages.
