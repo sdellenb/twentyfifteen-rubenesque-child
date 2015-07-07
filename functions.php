@@ -43,3 +43,12 @@ function antispam_bee_add_custom_patterns($patterns) {
 
 	return $patterns;
 }
+
+/**
+ *  Log login failures with something else than 200 OK
+ *  Copied from https://kovshenin.com/2014/fail2ban-wordpress-nginx/
+ */
+function my_login_failed_403() {
+    status_header( 403 );
+}
+add_action( 'wp_login_failed', 'my_login_failed_403' );
