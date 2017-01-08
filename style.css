@@ -5,7 +5,7 @@ Description: Twenty Fifteen Child Theme for rubenesque.ch
 Author:      Simon Dellenbach
 Author URI:  sdellenb@gmail.com
 Template:    twentyfifteen
-Version:     1.2
+Version:     1.3
 License:     GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: twentyfifteen
@@ -178,3 +178,12 @@ img.imagelist {
 .qtranxs_flag_and_text > span {
     margin-left: 20px;
 }
+
+/**
+ * Formatting of the singlepic-description template text.
+ */
+.ngg-singlepic-caption {
+    font-style: italic;
+    font-size: smaller;
+}
+
