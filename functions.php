@@ -25,6 +25,11 @@ function antispam_bee_patterns() {
 	);
 }
 function antispam_bee_add_custom_patterns($patterns) {
+	// Patterns for phony email addresses.
+	$patterns[] = array(
+		'email' => '@mail.ru$'
+	);
+
 	// Pattern for phony author names.
 	// Fun Fact: The last one is 'Prada' in Japanese.
 	$patterns[] = array(
