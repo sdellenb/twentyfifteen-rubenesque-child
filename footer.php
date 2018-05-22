@@ -24,9 +24,18 @@
 						 */
 						do_action( 'twentyfifteen_credits' );
 					?>
-					<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'twentyfifteen' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'twentyfifteen' ), 'WordPress' ); ?></a>
+					<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'twentyfifteen' ) ); ?>" class="imprint">
+						<?php printf( __( 'Proudly powered by %s', 'twentyfifteen' ), 'WordPress' ); ?>
+					</a>
 				</li>
-				<li><a href="https://github.com/sdellenb/twentyfifteen-rubenesque-child">Twenty Fifteen Rubenesque Child Theme</a> &copy;2015 Simon Dellenbach</li>
+				<li>
+					<a href="https://github.com/sdellenb/twentyfifteen-rubenesque-child">Twenty Fifteen Rubenesque Child Theme</a> &copy;2015 Simon Dellenbach
+				</li>
+				<?php
+					if ( function_exists( 'the_privacy_policy_link' ) ) {
+						the_privacy_policy_link( '', '<li><span role="separator" aria-hidden="true"></span></li>' );
+					}
+				?>
 			</ul>
 		</div><!-- .site-info -->
 	</footer><!-- .site-footer -->

@@ -42,20 +42,24 @@
 				the_content();
 			} else {
 				// This post is older than the limit, so we allow the 'Read more...' link to appear (if there is one).
-				the_content( sprintf(
-					__( 'Continue reading %s', 'twentyfifteen' ),
-					the_title( '<span class="screen-reader-text">', '</span>', false )
-				) );
+				the_content(
+					sprintf(
+						__( 'Continue reading %s', 'twentyfifteen' ),
+						the_title( '<span class="screen-reader-text">', '</span>', false )
+					)
+				);
 			}
 
-			wp_link_pages( array(
-				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentyfifteen' ) . '</span>',
-				'after'       => '</div>',
-				'link_before' => '<span>',
-				'link_after'  => '</span>',
-				'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'twentyfifteen' ) . ' </span>%',
-				'separator'   => '<span class="screen-reader-text">, </span>',
-			) );
+			wp_link_pages(
+				array(
+					'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentyfifteen' ) . '</span>',
+					'after'       => '</div>',
+					'link_before' => '<span>',
+					'link_after'  => '</span>',
+					'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'twentyfifteen' ) . ' </span>%',
+					'separator'   => '<span class="screen-reader-text">, </span>',
+				)
+			);
 		?>
 	</div><!-- .entry-content -->
 
