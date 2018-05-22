@@ -22,16 +22,6 @@
 </head>
 
 <body <?php body_class(); ?>>
-<noscript>
-	<iframe class="hidden" src="<?php
-		echo esc_url(get_stylesheet_directory_uri());
-	    ?>/includes/no-js.php?h=www.rubenesque.ch&amp;p=<?php
-		echo urlencode($_SERVER['REQUEST_URI']);
-	    ?>&amp;t=<?php
-		// Either get the blog or post title.
-		echo urlencode(is_home() ? wp_title('|', false, 'right') : get_the_title());
-	    ?>" width="0" height="0" style="display:none;position:absolute;"></iframe>
-</noscript>
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentyfifteen' ); ?></a>
 
